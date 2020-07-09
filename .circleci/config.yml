@@ -298,9 +298,9 @@ jobs:
 #       - checkout
 #       - run: git push --delete https://$REPO_GITHUB_TOKEN@github.com/graknlabs/client-java $CIRCLE_BRANCH
 
-# workflows:
-#   client-java:
-#     jobs:
+workflows:
+  client-java:
+    jobs:
 #       - build:
 #           filters:
 #             branches:
@@ -325,10 +325,10 @@ jobs:
 #           filters:
 #             branches:
 #               ignore: client-java-release-branch
-#       - test-behaviour-graql-define:
-#           filters:
-#             branches:
-#               ignore: client-java-release-branch
+      - test-behaviour-graql-define:
+          filters:
+            branches:
+              ignore: client-java-release-branch
 #       - test-behaviour-graql-delete:
 #           filters:
 #             branches:

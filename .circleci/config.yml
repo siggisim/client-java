@@ -143,15 +143,15 @@ jobs:
       - run-bazel:
           command: bazel test //test/behaviour/graql/language/get:test-core --test_output=errors
 
-  test-behaviour-graql-insert:
-    machine: 
-      image: ubuntu-1604:201903-01
-    working_directory: ~/client-java
-    steps:
-      - install-bazel
-      - checkout
-      - run-bazel:
-          command: bazel test //test/behaviour/graql/language/insert:test-core --test_output=errors
+#   test-behaviour-graql-insert:
+#     machine: 
+#       image: ubuntu-1604:201903-01
+#     working_directory: ~/client-java
+#     steps:
+#       - install-bazel
+#       - checkout
+#       - run-bazel:
+#           command: bazel test //test/behaviour/graql/language/insert:test-core --test_output=errors
 
   test-behaviour-graql-match:
     machine: 
@@ -337,10 +337,10 @@ workflows:
           filters:
             branches:
               ignore: client-java-release-branch
-      - test-behaviour-graql-insert:
-          filters:
-            branches:
-              ignore: client-java-release-branch
+#       - test-behaviour-graql-insert:
+#           filters:
+#             branches:
+#               ignore: client-java-release-branch
       - test-behaviour-graql-match:
           filters:
             branches:

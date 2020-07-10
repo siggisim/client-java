@@ -69,49 +69,49 @@ jobs:
 #       - run-bazel:
 #           command: bazel test $(bazel query 'kind(checkstyle_test, //...)')
 
-#   test-integration-concept:
-#     machine: 
-#       image: ubuntu-1604:201903-01
-#     working_directory: ~/client-java
-#     steps:
-#       - install-bazel
-#       - checkout
-#       - run-bazel:
-#           command: bazel test //test/integration/concept:concept-it --test_output=errors
+  test-integration-concept:
+    machine: 
+      image: ubuntu-1604:201903-01
+    working_directory: ~/client-java
+    steps:
+      - install-bazel
+      - checkout
+      - run-bazel:
+          command: bazel test //test/integration/concept:concept-it --test_output=errors
 
-#   test-integration-answer:
-#     machine: 
-#       image: ubuntu-1604:201903-01
-#     working_directory: ~/client-java
-#     steps:
-#       - install-bazel
-#       - checkout
-#       - run-bazel:
-#           command: bazel test //test/integration/answer:answer-it --test_output=errors
+  test-integration-answer:
+    machine: 
+      image: ubuntu-1604:201903-01
+    working_directory: ~/client-java
+    steps:
+      - install-bazel
+      - checkout
+      - run-bazel:
+          command: bazel test //test/integration/answer:answer-it --test_output=errors
 
-#   test-integration-tracing:
-#     machine: 
-#       image: ubuntu-1604:201903-01
-#     working_directory: ~/client-java
-#     steps:
-#       - install-bazel
-#       - checkout
-#       - run-bazel:
-#           command: bazel test //test/integration/tracing:tracing-it --test_output=errors
+  test-integration-tracing:
+    machine: 
+      image: ubuntu-1604:201903-01
+    working_directory: ~/client-java
+    steps:
+      - install-bazel
+      - checkout
+      - run-bazel:
+          command: bazel test //test/integration/tracing:tracing-it --test_output=errors
 
-#   test-behaviour-connection:
-#     machine: 
-#       image: ubuntu-1604:201903-01
-#     working_directory: ~/client-java
-#     steps:
-#       - install-bazel
-#       - checkout
-#       - run-bazel:
-#           command: bazel test //test/behaviour/connection/keyspace:test-core --test_output=errors
-#       - run-bazel:
-#           command: bazel test //test/behaviour/connection/session:test-core --test_output=errors
-#       - run-bazel:
-#           command: bazel test //test/behaviour/connection/transaction:test-core --test_output=errors
+  test-behaviour-connection:
+    machine: 
+      image: ubuntu-1604:201903-01
+    working_directory: ~/client-java
+    steps:
+      - install-bazel
+      - checkout
+      - run-bazel:
+          command: bazel test //test/behaviour/connection/keyspace:test-core --test_output=errors
+      - run-bazel:
+          command: bazel test //test/behaviour/connection/session:test-core --test_output=errors
+      - run-bazel:
+          command: bazel test //test/behaviour/connection/transaction:test-core --test_output=errors
 
   test-behaviour-graql-define:
     machine: 
@@ -123,65 +123,65 @@ jobs:
       - run-bazel:
           command: bazel test //test/behaviour/graql/language/define:test-core --test_output=errors
 
-#   test-behaviour-graql-delete:
-#     machine: 
-#       image: ubuntu-1604:201903-01
-#     working_directory: ~/client-java
-#     steps:
-#       - install-bazel
-#       - checkout
-#       - run-bazel:
-#           command: bazel test //test/behaviour/graql/language/delete:test-core --test_output=errors
+  test-behaviour-graql-delete:
+    machine: 
+      image: ubuntu-1604:201903-01
+    working_directory: ~/client-java
+    steps:
+      - install-bazel
+      - checkout
+      - run-bazel:
+          command: bazel test //test/behaviour/graql/language/delete:test-core --test_output=errors
 
-#   test-behaviour-graql-get:
-#     machine: 
-#       image: ubuntu-1604:201903-01
-#     working_directory: ~/client-java
-#     steps:
-#       - install-bazel
-#       - checkout
-#       - run-bazel:
-#           command: bazel test //test/behaviour/graql/language/get:test-core --test_output=errors
+  test-behaviour-graql-get:
+    machine: 
+      image: ubuntu-1604:201903-01
+    working_directory: ~/client-java
+    steps:
+      - install-bazel
+      - checkout
+      - run-bazel:
+          command: bazel test //test/behaviour/graql/language/get:test-core --test_output=errors
 
-#   test-behaviour-graql-insert:
-#     machine: 
-#       image: ubuntu-1604:201903-01
-#     working_directory: ~/client-java
-#     steps:
-#       - install-bazel
-#       - checkout
-#       - run-bazel:
-#           command: bazel test //test/behaviour/graql/language/insert:test-core --test_output=errors
+  test-behaviour-graql-insert:
+    machine: 
+      image: ubuntu-1604:201903-01
+    working_directory: ~/client-java
+    steps:
+      - install-bazel
+      - checkout
+      - run-bazel:
+          command: bazel test //test/behaviour/graql/language/insert:test-core --test_output=errors
 
-#   test-behaviour-graql-match:
-#     machine: 
-#       image: ubuntu-1604:201903-01
-#     working_directory: ~/client-java
-#     steps:
-#       - install-bazel
-#       - checkout
-#       - run-bazel:
-#           command: bazel test //test/behaviour/graql/language/match:test-core --test_output=errors
+  test-behaviour-graql-match:
+    machine: 
+      image: ubuntu-1604:201903-01
+    working_directory: ~/client-java
+    steps:
+      - install-bazel
+      - checkout
+      - run-bazel:
+          command: bazel test //test/behaviour/graql/language/match:test-core --test_output=errors
 
-#   test-behaviour-graql-undefine:
-#     machine: 
-#       image: ubuntu-1604:201903-01
-#     working_directory: ~/client-java
-#     steps:
-#       - install-bazel
-#       - checkout
-#       - run-bazel:
-#           command: bazel test //test/behaviour/graql/language/undefine:test-core --test_output=errors
+  test-behaviour-graql-undefine:
+    machine: 
+      image: ubuntu-1604:201903-01
+    working_directory: ~/client-java
+    steps:
+      - install-bazel
+      - checkout
+      - run-bazel:
+          command: bazel test //test/behaviour/graql/language/undefine:test-core --test_output=errors
 
-#   test-behaviour-graql-reasoner:
-#     machine: 
-#       image: ubuntu-1604:201903-01
-#     working_directory: ~/client-java
-#     steps:
-#       - install-bazel
-#       - checkout
-#       - run-bazel:
-#           command: bazel test //test/behaviour/graql/reasoner/explanation:test-core --test_output=errors
+  test-behaviour-graql-reasoner:
+    machine: 
+      image: ubuntu-1604:201903-01
+    working_directory: ~/client-java
+    steps:
+      - install-bazel
+      - checkout
+      - run-bazel:
+          command: bazel test //test/behaviour/graql/reasoner/explanation:test-core --test_output=errors
 
 #   deploy-maven-snapshot:
 #     machine: 
@@ -309,46 +309,46 @@ workflows:
 #           filters:
 #             branches:
 #               ignore: client-java-release-branch
-#       - test-integration-concept:
-#           filters:
-#             branches:
-#               ignore: client-java-release-branch
-#       - test-integration-answer:
-#           filters:
-#             branches:
-#               ignore: client-java-release-branch
-#       - test-integration-tracing:
-#           filters:
-#             branches:
-#               ignore: client-java-release-branch
-#       - test-behaviour-connection:
-#           filters:
-#             branches:
-#               ignore: client-java-release-branch
+      - test-integration-concept:
+          filters:
+            branches:
+              ignore: client-java-release-branch
+      - test-integration-answer:
+          filters:
+            branches:
+              ignore: client-java-release-branch
+      - test-integration-tracing:
+          filters:
+            branches:
+              ignore: client-java-release-branch
+      - test-behaviour-connection:
+          filters:
+            branches:
+              ignore: client-java-release-branch
       - test-behaviour-graql-define:
           filters:
             branches:
               ignore: client-java-release-branch
-#       - test-behaviour-graql-delete:
-#           filters:
-#             branches:
-#               ignore: client-java-release-branch
-#       - test-behaviour-graql-get:
-#           filters:
-#             branches:
-#               ignore: client-java-release-branch
-#       - test-behaviour-graql-insert:
-#           filters:
-#             branches:
-#               ignore: client-java-release-branch
-#       - test-behaviour-graql-match:
-#           filters:
-#             branches:
-#               ignore: client-java-release-branch
-#       - test-behaviour-graql-undefine:
-#           filters:
-#             branches:
-#               ignore: client-java-release-branch
+      - test-behaviour-graql-delete:
+          filters:
+            branches:
+              ignore: client-java-release-branch
+      - test-behaviour-graql-get:
+          filters:
+            branches:
+              ignore: client-java-release-branch
+      - test-behaviour-graql-insert:
+          filters:
+            branches:
+              ignore: client-java-release-branch
+      - test-behaviour-graql-match:
+          filters:
+            branches:
+              ignore: client-java-release-branch
+      - test-behaviour-graql-undefine:
+          filters:
+            branches:
+              ignore: client-java-release-branch
 # #      - test-behaviour-graql-reasoner:
 # #          filters:
 # #            branches:
